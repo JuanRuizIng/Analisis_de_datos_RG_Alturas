@@ -2,4 +2,5 @@
 Dashboard para análisis de datos a la empresa RG Alturas, empresa que expide certificados contra riesgos de altura en Colombia
 Se incluye:
 - Base de datos
+- Funciones con la limpieza de datos.
 - Dashboard con plotly y dash.
