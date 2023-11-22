@@ -4,3 +4,4 @@ Se incluye:
 - Base de datos
 - Funciones con la limpieza de datos.
 - Dashboard con plotly y dash.
+- Filtro de algunas cédulas que no corresponden a las personas
