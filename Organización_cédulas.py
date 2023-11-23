@@ -7,20 +7,33 @@ df_base_v1 = df_base_v1.loc[1770:3890,"PRIMER NOMBRE":"# DOCUMENTO"]
 df_base_v1 = df_base_v1.drop(["TIPO DE DOCUMENTO"], axis=1)
 df_cer_b = df_cer_b.loc[0:2117, "No documento":"Apellidos"]
 
+nombres_separados = []
+
+def obtener_primer_nombre(name):
+    names = name.split(" ")
+    return names[:1]
+
+lista_nombres = []
+for nombres in df_cer_b["Nombres"].apply(obtener_primer_nombre):
+    lista_nombres.append(nombres)
+
+df_cer_b["PRIMER NOMBRE"] = pd.DataFrame(lista_nombres)
+
+
+#print(df_cer_b["PRIMER NOMBRE"])
+
 #print(df_cer_b.head(-1))
 #print(df_base_v1.head(-1))
 
-df_base_v1["NOMBRES"] = df_base_v1["PRIMER NOMBRE"].astype(str) + " " + df_base_v1["SEGUNDO NOMBRE"].astype(str)
-
 df_base_v1["APELLIDOS"] = df_base_v1["PRIMER APELLIDO"].astype(str) + " " + df_base_v1["SEGUNDO APELLIDO"].astype(str)
 
-df_base_v1["NOMBRES Y APELLIDOS"] = df_base_v1["NOMBRES"].astype(str) + " " + df_base_v1["APELLIDOS"].astype(str)
+df_base_v1["NOMBRE Y APELLIDOS"] = df_base_v1["PRIMER NOMBRE"].astype(str) + " " + df_base_v1["APELLIDOS"].astype(str)
 
-df_cer_b["NOMBRES Y APELLIDOS"] = df_cer_b["Nombres"].astype(str) + " " + df_cer_b["Apellidos"].astype(str)
+df_cer_b["NOMBRE Y APELLIDOS"] = df_cer_b["PRIMER NOMBRE"].astype(str) + " " + df_cer_b["Apellidos"].astype(str)
 
-df_base_v1["NOMBRE COMPLETO Y CÉDULA"] = df_base_v1["NOMBRES Y APELLIDOS"].astype(str) + " " + df_base_v1["# DOCUMENTO"].astype(str)
+df_base_v1["NOMBRE COMPLETO Y CÉDULA"] = df_base_v1["NOMBRE Y APELLIDOS"].astype(str) + " " + df_base_v1["# DOCUMENTO"].astype(str)
 
-df_cer_b["NOMBRE COMPLETO Y CÉDULA"] = df_cer_b["NOMBRES Y APELLIDOS"].astype(str) + " " + df_cer_b["No documento"].astype(str)
+df_cer_b["NOMBRE COMPLETO Y CÉDULA"] = df_cer_b["NOMBRE Y APELLIDOS"].astype(str) + " " + df_cer_b["No documento"].astype(str)
 
 #print(df_base_v1["NOMBRES Y APELLIDOS"])
 
