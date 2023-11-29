@@ -19,23 +19,11 @@ for nombres in df_cer_b["Nombres"].apply(obtener_primer_nombre):
 
 df_cer_b["PRIMER NOMBRE"] = pd.DataFrame(lista_nombres)
 
-
-#print(df_cer_b["PRIMER NOMBRE"])
-
-#print(df_cer_b.head(-1))
-#print(df_base_v1.head(-1))
-
 df_base_v1["APELLIDOS"] = df_base_v1["PRIMER APELLIDO"].astype(str) + " " + df_base_v1["SEGUNDO APELLIDO"].astype(str)
 
-df_base_v1["NOMBRE Y APELLIDOS"] = df_base_v1["PRIMER NOMBRE"].astype(str) + " " + df_base_v1["APELLIDOS"].astype(str)
+df_base_v1["APELLIDOS Y CÉDULA"] = df_base_v1["APELLIDOS"].astype(str) + " " + df_base_v1["# DOCUMENTO"].astype(str)
 
-df_cer_b["NOMBRE Y APELLIDOS"] = df_cer_b["PRIMER NOMBRE"].astype(str) + " " + df_cer_b["Apellidos"].astype(str)
-
-df_base_v1["NOMBRE COMPLETO Y CÉDULA"] = df_base_v1["NOMBRE Y APELLIDOS"].astype(str) + " " + df_base_v1["# DOCUMENTO"].astype(str)
-
-df_cer_b["NOMBRE COMPLETO Y CÉDULA"] = df_cer_b["NOMBRE Y APELLIDOS"].astype(str) + " " + df_cer_b["No documento"].astype(str)
-
-#print(df_base_v1["NOMBRES Y APELLIDOS"])
+df_cer_b["APELLIDOS Y CÉDULA"] = df_cer_b["Apellidos"].astype(str) + " " + df_cer_b["No documento"].astype(str)
 
 def limpiar_nan(cadena):
     return cadena !="nan"
@@ -45,17 +33,14 @@ lista_base_cer_b = []
 posibles_cedulas_confusas = []
 posibles_cedulas_confusas_comparar = []
 
-for persona in df_base_v1["NOMBRE COMPLETO Y CÉDULA"]:
+for persona in df_base_v1["APELLIDOS Y CÉDULA"]:
     lista_base_v1.append(persona)
 
-for persona in df_cer_b["NOMBRE COMPLETO Y CÉDULA"]:
+for persona in df_cer_b["APELLIDOS Y CÉDULA"]:
     lista_base_cer_b.append(persona)
 
 lista_base_v1 = [x.replace("nan", "") for x in lista_base_v1]
 lista_base_v1 = [x.replace("  ", " ") for x in lista_base_v1]
-
-#print(lista_base_v1)
-#print(lista_base_cer_b[0])
 
 for persona in lista_base_v1:
     if persona in lista_base_cer_b:
