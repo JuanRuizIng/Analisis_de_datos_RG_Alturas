@@ -3,21 +3,10 @@ import pandas as pd
 df_base_v1 = pd.read_excel("BASE DATOS RG ALTURAS.xlsx", sheet_name ="GENERAL")
 df_cer_b = pd.read_excel("CARGA MASIVA 2022 - Certificados B.xlsx", sheet_name="CARGA MASIVA 2022 - Certificado")
 
-df_base_v1 = df_base_v1.loc[1770:3890,"PRIMER NOMBRE":"# DOCUMENTO"]
+df_base_v1 = df_base_v1.loc[1770:3890,"PRIMER APELLIDO":"# DOCUMENTO"]
 df_base_v1 = df_base_v1.drop(["TIPO DE DOCUMENTO"], axis=1)
 df_cer_b = df_cer_b.loc[0:2117, "No documento":"Apellidos"]
-
-nombres_separados = []
-
-def obtener_primer_nombre(name):
-    names = name.split(" ")
-    return names[:1]
-
-lista_nombres = []
-for nombres in df_cer_b["Nombres"].apply(obtener_primer_nombre):
-    lista_nombres.append(nombres)
-
-df_cer_b["PRIMER NOMBRE"] = pd.DataFrame(lista_nombres)
+df_cer_b = df_cer_b.drop(["Nombres"], axis=1)
 
 df_base_v1["APELLIDOS"] = df_base_v1["PRIMER APELLIDO"].astype(str) + " " + df_base_v1["SEGUNDO APELLIDO"].astype(str)
 
