@@ -1,6 +1,6 @@
 # ANÁLISIS DE DATOS A LA EMPRESA RG ALTURAS
 
-* ## Contenido
+## Contenido
 
 * Bases de datos de RG ALTURAS con corte a agosto de 2023.
 
@@ -8,13 +8,13 @@
 
 * Archivo python con la resolución de problemas con las cédulas de los clientes.
 
-* ## Resumen
+## Resumen
 
 _De acuerdo con un análisis publicado por Confecámaras, en los países de la Organización para la Cooperación y el Desarrollo Económico (Ocde), más de la mitad de las empresas nuevas fracasan en sus primeros cinco años de vida. Solo en el primer año, desaparecen entre 20% y 30% de ellas, desde entonces, el índice aumenta 10% cada año hasta completar cinco._
 
 Teniendo como referencia dicho contexto, este proyecto se enfoca en la resolución de problemas en la gestión empresarial a través del análisis de datos en una pyme llamada "RG ALTURAS", que expide certificados de trabajo en alturas certificada por el Ministerio de Salud y Protección Social de Colombia desde hace 3 años.
 
-* ## Resultados
+## Resultados
 
 * Funciones con la limpieza de datos realizada a la base de datos de RG ALTURAS.
 
@@ -22,7 +22,7 @@ Teniendo como referencia dicho contexto, este proyecto se enfoca en la resoluci�
 
 * Resolución de problemas de digitación con las cédulas de los clientes.
 
-* ## Observaciones
+## Observaciones
 
 * La empresa tiene una tendencia a mejorar según pasan los años desde su creación.
 
@@ -42,6 +42,6 @@ Teniendo como referencia dicho contexto, este proyecto se enfoca en la resoluci�
 
 * Existe una discrepancia entre las cédulas registradas en la base de datos y los datos reales de las personas.
 
-* ## Conclusión
+## Conclusión
 
 RG ALTURAS en general ha hecho una buena gestión que permite que la asistencia cada año mejore a pesar de una posible crisis pospandemia y diferentes problemas que el contexto pudo haber intervenido de manera negativa. Se recomienda atención en la transmisión de los diferentes mensajes educativos que se proponen, debido al bajo nivel academico que manejan las personas que asisten a realizar los diferentes cursos que se disponen. También es importante verificar cuidadosamente los datos de las personas, y corregir cualquier discrepancia que se encuentre.
