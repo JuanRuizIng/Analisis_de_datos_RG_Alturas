@@ -2,8 +2,6 @@
 
 ## Contenido
 
-* Bases de datos de RG ALTURAS con corte a agosto de 2023.
-
 * Archivo python con la limpieza de datos y el Dashboard.
 
 * Archivo python con la resolución de problemas con las cédulas de los clientes.

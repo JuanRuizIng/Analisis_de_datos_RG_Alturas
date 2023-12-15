@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 BASE_DATOS_RG_ALTURAS = os.environ.get("BASE_DATOS_RG_ALTURAS")
 
 # Cargar tus datos
-df = pd.read_excel("BASE DATOS RG ALTURAS.xlsx", sheet_name="GENERAL")
+df = pd.read_excel("BASE DATOS RG ALTURAS 2021 V1.xlsx", sheet_name="GENERAL")
 
 # Limpieza de datos
 def eliminar_columnas(df):
