@@ -1,11 +1,13 @@
 import dash
 from dash import dcc, html, Input, Output, State, callback_context
 import dash_bootstrap_components as dbc
-
+import os
 import pandas as pd
 from datetime import datetime
 
 import plotly.graph_objects as go
+
+BASE_DATOS_RG_ALTURAS = os.environ.get("BASE_DATOS_RG_ALTURAS")
 
 # Cargar tus datos
 df = pd.read_excel("BASE DATOS RG ALTURAS.xlsx", sheet_name="GENERAL")
