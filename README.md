@@ -22,7 +22,7 @@ Teniendo como referencia dicho contexto, este proyecto se enfoca en la resoluci�
 
 ## Observaciones
 
-* La empresa tiene una tendencia a mejorar según pasan los años desde su creación.
+* La empresa tiene una tendencia a mejorar en la asistencia a los diferentes cursos según pasan los años desde su creación.
 
 * Las personas de entre 30 y 40 años son las que más asistieron a realizar los diferentes cursos, siendo el nivel educativo bachiller el que más prevalece en este rango de edad.
 
